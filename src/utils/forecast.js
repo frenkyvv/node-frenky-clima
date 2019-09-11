@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to get coordinates')
         } else {
-            callback(undefined, body.daily.data[0].summary + ' Actualmente estamos a  ' + body.currently.temperature + ' grados. Con una probabilidad de ' + body.currently.precipProbability + ' % de llover.')
+            callback(undefined, body.daily.data[0].summary + ' Actualmente estamos a  ' + body.currently.temperature + ' grados. Con una probabilidad de ' + body.currently.precipProbability + ' % de llover.' + ' Con un Ozono de '+ body.currently.ozone)
         }              
     })
 }
